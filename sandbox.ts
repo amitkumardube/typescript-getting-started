@@ -2,7 +2,7 @@ const character = 'amit';
 
 console.log(character);
 
-const inputs = document.querySelectorAll('input')
+const inputs = document.querySelectorAll('input');
 
 console.log(inputs);
 
@@ -14,7 +14,7 @@ let user_name = 'amit';
 let user_age = 23;
 
 const circ = (diameter : number) => {
-    return diameter*Math.PI
+    return diameter*Math.PI;
 };
 
 console.log(circ(2.75));
