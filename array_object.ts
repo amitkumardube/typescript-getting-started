@@ -1,3 +1,4 @@
+//arrays
 let names = ["amit" , "kshitiz" , "sonam"];
 
 names.push("kiran");
@@ -10,6 +11,8 @@ let mixed = ["abc", 4 , "def" , 8];
 mixed.push("ghi");
 mixed.push("jkl");
 mixed.push(12);
+
+//objects
 
 let ninja = {
     name : "mario",
