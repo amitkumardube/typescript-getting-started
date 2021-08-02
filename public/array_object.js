@@ -1,3 +1,5 @@
+"use strict";
+//arrays
 var names = ["amit", "kshitiz", "sonam"];
 names.push("kiran");
 // this will not work
@@ -6,6 +8,7 @@ var mixed = ["abc", 4, "def", 8];
 mixed.push("ghi");
 mixed.push("jkl");
 mixed.push(12);
+//objects
 var ninja = {
     name: "mario",
     address: "test",

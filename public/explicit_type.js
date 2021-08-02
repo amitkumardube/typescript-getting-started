@@ -1,8 +1,11 @@
+"use strict";
+// explicit  type
 var uname;
 uname = 'abc';
 console.log(uname);
-var mixed = [];
-mixed.push('abc');
-mixed.push(10);
-mixed.push(true);
-console.log(mixed);
+// arrays
+var mixed_t = [];
+mixed_t.push('abc');
+mixed_t.push(10);
+mixed_t.push(true);
+console.log(mixed_t);

@@ -4,10 +4,10 @@ uname = 'abc';
 console.log(uname);
 
 // arrays
-let mixed : (string | number | boolean)[] = [];
+let mixed_t : (string | number | boolean)[] = [];
 
-mixed.push('abc');
-mixed.push(10);
-mixed.push(true);
+mixed_t.push('abc');
+mixed_t.push(10);
+mixed_t.push(true);
 
-console.log(mixed);
+console.log(mixed_t);
