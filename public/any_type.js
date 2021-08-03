@@ -1,5 +1,5 @@
 "use strict";
-var age;
+let age;
 age = 23;
 console.log(age);
 age = "hello";

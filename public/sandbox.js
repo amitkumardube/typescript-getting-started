@@ -1,14 +1,14 @@
 "use strict";
-var character = 'amit';
+const character = 'amit';
 console.log(character);
-var inputs = document.querySelectorAll('input');
+const inputs = document.querySelectorAll('input');
 console.log(inputs);
-inputs.forEach(function (input) {
+inputs.forEach(input => {
     console.log(input);
 });
-var user_name = 'amit';
-var user_age = 23;
-var circ = function (diameter) {
+let user_name = 'amit';
+let user_age = 23;
+const circ = (diameter) => {
     return diameter * Math.PI;
 };
 console.log(circ(2.75));

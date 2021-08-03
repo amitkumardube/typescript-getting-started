@@ -1,15 +1,15 @@
 "use strict";
 //arrays
-var names = ["amit", "kshitiz", "sonam"];
+let names = ["amit", "kshitiz", "sonam"];
 names.push("kiran");
 // this will not work
 //names.push(3);
-var mixed = ["abc", 4, "def", 8];
+let mixed = ["abc", 4, "def", 8];
 mixed.push("ghi");
 mixed.push("jkl");
 mixed.push(12);
 //objects
-var ninja = {
+let ninja = {
     name: "mario",
     address: "test",
     age: 30

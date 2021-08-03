@@ -1,8 +1,8 @@
 "use strict";
-var meeting = function (a) {
+let meeting = (a) => {
     console.log(a);
 };
-var objectreturn = function (a) {
+let objectreturn = (a) => {
     return a.a + a.b;
 };
 meeting("Hello");

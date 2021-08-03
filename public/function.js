@@ -1,6 +1,6 @@
 "use strict";
-var greet;
-greet = function (a, b, c) {
+let greet;
+greet = (a, b, c) => {
     console.log(a + b);
 };
 greet(10, 5);
