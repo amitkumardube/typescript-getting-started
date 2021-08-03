@@ -1,5 +1,9 @@
+// importing the class
+
+import {user_scope} from './classes/user.js'
+
 // defining the class
-class user_scope {
+/* class user_scope {
     // defining class properties
     public name : string; // can be read or adjusted from anywhere
     private age : number; // can only be read or adjusted from inside the class
@@ -17,7 +21,7 @@ class user_scope {
     }
 
 }
-
+ */
 // creating instance of the class. We created 3 instance of same  class.
 
 let kshitiz_scope = new user_scope('kshitiz',8,'romania');

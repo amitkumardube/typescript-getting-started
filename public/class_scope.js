@@ -1,8 +1,13 @@
-"use strict";
+// importing the class
+import { user_scope } from './classes/user.js';
 // defining the class
-class user_scope {
+/* class user_scope {
+    // defining class properties
+    public name : string; // can be read or adjusted from anywhere
+    private age : number; // can only be read or adjusted from inside the class
+    readonly address : string;  // can only be read inside or outside the class
     // defining class constructor to initizlize the properties
-    constructor(n, a, ad) {
+    constructor(n :string , a:number , ad : string) {
         this.name = n;
         this.age = a;
         this.address = ad;
@@ -12,7 +17,9 @@ class user_scope {
     displayMsg() {
         console.log(`${this.name} is ${this.age} years old and living at address ${this.address}`);
     }
+
 }
+ */
 // creating instance of the class. We created 3 instance of same  class.
 let kshitiz_scope = new user_scope('kshitiz', 8, 'romania');
 let sonam_scope = new user_scope('sonam', 15, 'romania');
