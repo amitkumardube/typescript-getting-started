@@ -14,3 +14,4 @@ you.Age = 20;
 you.purchase(20);
 you.payment(30);
 console.log(you);
+//# sourceMappingURL=user.js.map

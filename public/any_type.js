@@ -6,3 +6,4 @@ age = "hello";
 console.log(age);
 age = true;
 console.log(age);
+//# sourceMappingURL=any_type.js.map

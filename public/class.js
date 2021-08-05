@@ -29,3 +29,4 @@ users.push(kshitiz);
 users.forEach(user => {
     console.log(user.name, user.age, user.address);
 });
+//# sourceMappingURL=class.js.map

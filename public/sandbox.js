@@ -12,3 +12,4 @@ const circ = (diameter) => {
     return diameter * Math.PI;
 };
 console.log(circ(2.75));
+//# sourceMappingURL=sandbox.js.map

@@ -13,3 +13,4 @@ export class user_scope {
         console.log(`${this.name} is ${this.age} years old and living at address ${this.address}`);
     }
 }
+//# sourceMappingURL=user.js.map

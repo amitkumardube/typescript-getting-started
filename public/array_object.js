@@ -20,3 +20,4 @@ ninja = {
     address: "testing",
     age: 40
 };
+//# sourceMappingURL=array_object.js.map

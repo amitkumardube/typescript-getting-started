@@ -41,3 +41,4 @@ users_scope.forEach(user => {
     console.log(user.name, user.address);
     user.displayMsg();
 });
+//# sourceMappingURL=class_scope.js.map

@@ -7,3 +7,4 @@ let objectreturn = (a) => {
 };
 meeting("Hello");
 console.log(objectreturn({ a: 10, b: 20 }));
+//# sourceMappingURL=alias.js.map

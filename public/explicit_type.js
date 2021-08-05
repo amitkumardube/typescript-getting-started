@@ -9,3 +9,4 @@ mixed_t.push('abc');
 mixed_t.push(10);
 mixed_t.push(true);
 console.log(mixed_t);
+//# sourceMappingURL=explicit_type.js.map
