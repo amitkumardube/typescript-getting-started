@@ -315,7 +315,7 @@ function run() {
                 yield code_scanning_1.code_scanning(octokit, owner, repo, branch).
                     catch(error => {
                     if (error.message.toLowerCase() === 'no analysis found') {
-                        core.Info("INFO - It seems that code analysis is not enabled and no code analysis found.");
+                        core.info("INFO - It seems that code analysis is not enabled and no code analysis found.");
                     }
                     else {
                         core.setFailed("failed to access code scanning alerts - " + error.message);
