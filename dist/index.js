@@ -24,6 +24,7 @@ const file_1 = __nccwpck_require__(4014);
 const display_stats_1 = __nccwpck_require__(6444);
 const parse_link_header_1 = __importDefault(__nccwpck_require__(1940));
 const code_scanning = (octokit, owner, repo, branch) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log(branch);
     const data = yield get_all_pages(octokit, owner, repo, branch, 1);
     // this will crate the json file and retrun it  as string as well
     const msg = file_1.createCodeScanningFile(data, branch);
@@ -32,6 +33,7 @@ const code_scanning = (octokit, owner, repo, branch) => __awaiter(void 0, void 0
 });
 exports.code_scanning = code_scanning;
 const get_all_pages = (octokit, owner, repo, branch, page) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log(branch);
     const all_pages = [];
     const result = yield octokit.rest.codeScanning.listAlertsForRepo({
         owner: owner,
@@ -314,13 +316,13 @@ function run() {
                 branch = data[i].name;
                 // getting code scanning alerts
                 yield code_scanning_1.code_scanning(octokit, owner, repo, branch).
-                    catch(error => core.setFailed("failed to access code scanning alerts" + error.message));
+                    catch(error => core.setFailed("failed to access code scanning alerts - " + error.message));
             }
         }
         else {
             // means we will only focus on the branch supplied by user as input
             yield code_scanning_1.code_scanning(octokit, owner, repo, branch).
-                catch(error => core.setFailed("failed to access code scanning alerts" + error.message));
+                catch(error => core.setFailed("failed to access code scanning alerts - " + error.message));
         }
         // calling the function to add final stats
         let all_stats = supply_total_stats();
