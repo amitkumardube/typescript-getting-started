@@ -24,7 +24,6 @@ const file_1 = __nccwpck_require__(4014);
 const display_stats_1 = __nccwpck_require__(6444);
 const parse_link_header_1 = __importDefault(__nccwpck_require__(1940));
 const code_scanning = (octokit, owner, repo, branch) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(branch);
     const data = yield get_all_pages(octokit, owner, repo, branch, 1);
     // this will crate the json file and retrun it  as string as well
     const msg = file_1.createCodeScanningFile(data, branch);
@@ -33,7 +32,6 @@ const code_scanning = (octokit, owner, repo, branch) => __awaiter(void 0, void 0
 });
 exports.code_scanning = code_scanning;
 const get_all_pages = (octokit, owner, repo, branch, page) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(branch);
     const all_pages = [];
     const result = yield octokit.rest.codeScanning.listAlertsForRepo({
         owner: owner,
@@ -42,7 +40,6 @@ const get_all_pages = (octokit, owner, repo, branch, page) => __awaiter(void 0, 
         per_page: 100,
         page: page
     });
-    console.log(result);
     all_pages.push(...result.data);
     const pagination = parse_link_header_1.default(result.headers.link);
     //console.log(pagination);
@@ -316,7 +313,14 @@ function run() {
                 branch = data[i].name;
                 // getting code scanning alerts
                 yield code_scanning_1.code_scanning(octokit, owner, repo, branch).
-                    catch(error => core.setFailed("failed to access code scanning alerts - " + error.message));
+                    catch(error => {
+                    if (error.message.toLowerCase() === 'no analysis found') {
+                        core.Info("INFO - It seems that code analysis is not enabled and no code analysis found.");
+                    }
+                    else {
+                        core.setFailed("failed to access code scanning alerts - " + error.message);
+                    }
+                });
             }
         }
         else {
