@@ -40,6 +40,7 @@ const get_all_pages = (octokit, owner, repo, branch, page) => __awaiter(void 0, 
         per_page: 100,
         page: page
     });
+    console.log(result);
     all_pages.push(...result.data);
     const pagination = parse_link_header_1.default(result.headers.link);
     //console.log(pagination);
